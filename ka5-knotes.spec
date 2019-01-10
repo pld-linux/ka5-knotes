@@ -122,7 +122,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/48x48/apps/knotes.png
 %{_iconsdir}/hicolor/64x64/apps/knotes.png
 %{_iconsdir}/hicolor/scalable/apps/knotes.svg
-%{_datadir}/kconf_update/knotes-15.08-kickoff.sh
+%attr(755,root,root) %{_datadir}/kconf_update/knotes-15.08-kickoff.sh
 %{_datadir}/kconf_update/knotes.upd
 %{_datadir}/knotes
 %{_datadir}/knotifications5/akonadi_notes_agent.notifyrc
