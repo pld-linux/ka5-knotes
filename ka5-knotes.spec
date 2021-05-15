@@ -1,15 +1,15 @@
-%define		kdeappsver	21.04.0
+%define		kdeappsver	21.04.1
 %define		kframever	5.56
 %define		qtver		5.9.0
 %define		kaname		knotes
 Summary:	knotes
 Name:		ka5-%{kaname}
-Version:	21.04.0
+Version:	21.04.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	9383295591179e25053c3ac742a00896
+# Source0-md5:	a0aa6c7aac04b1c4b643fde14e7b7c96
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel
@@ -98,9 +98,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/akonadi_notes_agent
 %attr(755,root,root) %{_bindir}/knotes
-%attr(755,root,root) %ghost %{_libdir}/libknotesprivate.so.5
+%ghost %{_libdir}/libknotesprivate.so.5
 %attr(755,root,root) %{_libdir}/libknotesprivate.so.5.*.*
-%attr(755,root,root) %ghost %{_libdir}/libnotesharedprivate.so.5
+%ghost %{_libdir}/libnotesharedprivate.so.5
 %attr(755,root,root) %{_libdir}/libnotesharedprivate.so.5.*.*
 %attr(755,root,root) %{_libdir}/qt5/plugins/kcm_knote.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kcm_knotessummary.so
