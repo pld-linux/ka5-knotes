@@ -69,6 +69,12 @@ sticky notes. The notes are saved automatically when you exit the
 program, and they display when you open the program. Features. Write
 notes in your choice of font and background color.
 
+%description -l pl.UTF-8
+KNotes jest programem pozwalającym pisać na komputerze notatki,
+odpowiedniki samoprzylepnych karteczek. Notatki są zapisywane
+automatycznie przy wyjściu z programu i wyświetlane przy otwieraniu
+programu. Właściwości: pisz notatki wybraną czcionką i kolorem tła.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
