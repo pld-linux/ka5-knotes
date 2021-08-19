@@ -1,15 +1,15 @@
-%define		kdeappsver	21.04.3
+%define		kdeappsver	21.08.0
 %define		kframever	5.56
 %define		qtver		5.9.0
 %define		kaname		knotes
 Summary:	knotes
 Name:		ka5-%{kaname}
-Version:	21.04.3
+Version:	21.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	09e0d7ae09ea7fccb110938b5eddae07
+# Source0-md5:	152f92af81cdc4d2200d486bc797b573
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel
@@ -108,8 +108,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libknotesprivate.so.5.*.*
 %ghost %{_libdir}/libnotesharedprivate.so.5
 %attr(755,root,root) %{_libdir}/libnotesharedprivate.so.5.*.*
-%attr(755,root,root) %{_libdir}/qt5/plugins/kcm_knote.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/kcm_knotessummary.so
 %{_datadir}/akonadi/agents/notesagent.desktop
 %{_desktopdir}/org.kde.knotes.desktop
 %{_datadir}/config.kcfg/knotesglobalconfig.kcfg
@@ -134,13 +132,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/kontact/ksettingsdialog
 %{_datadir}/kontact/ksettingsdialog/knotes.setdlg
 %{_datadir}/kservices5/kcmknotessummary.desktop
-%{_datadir}/kservices5/knote_config_action.desktop
-%{_datadir}/kservices5/knote_config_collection.desktop
-%{_datadir}/kservices5/knote_config_display.desktop
-%{_datadir}/kservices5/knote_config_editor.desktop
-%{_datadir}/kservices5/knote_config_misc.desktop
-%{_datadir}/kservices5/knote_config_network.desktop
-%{_datadir}/kservices5/knote_config_print.desktop
 %{_datadir}/kservices5/kontact/knotesplugin.desktop
 %{_datadir}/kxmlgui5/knotes
 %{_datadir}/metainfo/org.kde.knotes.appdata.xml
@@ -148,3 +139,19 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/qlogging-categories5/knotes.categories
 %{_datadir}/qlogging-categories5/knotes.renamecategories
 %attr(755,root,root) %{_libdir}/qt5/plugins/kontact5/kontact_knotesplugin.so
+%dir %{_libdir}/qt5/plugins/pim/kcms/knotes
+%{_libdir}/qt5/plugins/pim/kcms/knotes/kcm_knote_action.so
+%{_libdir}/qt5/plugins/pim/kcms/knotes/kcm_knote_collection.so
+%{_libdir}/qt5/plugins/pim/kcms/knotes/kcm_knote_display.so
+%{_libdir}/qt5/plugins/pim/kcms/knotes/kcm_knote_editor.so
+%{_libdir}/qt5/plugins/pim/kcms/knotes/kcm_knote_misc.so
+%{_libdir}/qt5/plugins/pim/kcms/knotes/kcm_knote_network.so
+%{_libdir}/qt5/plugins/pim/kcms/knotes/kcm_knote_print.so
+%{_libdir}/qt5/plugins/pim/kcms/summary/kcmknotessummary.so
+%{_datadir}/kservices5/kcm_knote_action.desktop
+%{_datadir}/kservices5/kcm_knote_collection.desktop
+%{_datadir}/kservices5/kcm_knote_display.desktop
+%{_datadir}/kservices5/kcm_knote_editor.desktop
+%{_datadir}/kservices5/kcm_knote_misc.desktop
+%{_datadir}/kservices5/kcm_knote_network.desktop
+%{_datadir}/kservices5/kcm_knote_print.desktop
