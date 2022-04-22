@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	21.12.3
+%define		kdeappsver	22.04.0
 %define		kframever	5.56
 %define		qtver		5.9.0
 %define		kaname		knotes
 Summary:	knotes
 Name:		ka5-%{kaname}
-Version:	21.12.3
+Version:	22.04.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	232d5cf8c9195c10334c0ad8fd54f180
+# Source0-md5:	27a21821d3201170f2d48c466ed20370
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel
@@ -136,8 +136,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/scalable/apps/knotes.svg
 %{_datadir}/knotes
 %{_datadir}/knotifications5/akonadi_notes_agent.notifyrc
-%{_datadir}/kservices5/kcmknotessummary.desktop
-%{_datadir}/kservices5/kontact/knotesplugin.desktop
 %{_datadir}/kxmlgui5/knotes
 %{_datadir}/metainfo/org.kde.knotes.appdata.xml
 %{_datadir}/knsrcfiles/knotes_printing_theme.knsrc
@@ -153,10 +151,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt5/plugins/pim/kcms/knotes/kcm_knote_network.so
 %{_libdir}/qt5/plugins/pim/kcms/knotes/kcm_knote_print.so
 %{_libdir}/qt5/plugins/pim/kcms/summary/kcmknotessummary.so
-%{_datadir}/kservices5/kcm_knote_action.desktop
-%{_datadir}/kservices5/kcm_knote_collection.desktop
-%{_datadir}/kservices5/kcm_knote_display.desktop
-%{_datadir}/kservices5/kcm_knote_editor.desktop
-%{_datadir}/kservices5/kcm_knote_misc.desktop
-%{_datadir}/kservices5/kcm_knote_network.desktop
-%{_datadir}/kservices5/kcm_knote_print.desktop
