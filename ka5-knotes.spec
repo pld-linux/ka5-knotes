@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	22.04.3
+%define		kdeappsver	22.08.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		knotes
 Summary:	knotes
 Name:		ka5-%{kaname}
-Version:	22.04.3
+Version:	22.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	9b8351509406882e1fe99cf0b0ec3b85
+# Source0-md5:	69ce3df36d10024daefd01a794593d83
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel
@@ -76,7 +76,8 @@ notes in your choice of font and background color.
 KNotes jest programem pozwalającym pisać na komputerze notatki,
 odpowiedniki samoprzylepnych karteczek. Notatki są zapisywane
 automatycznie przy wyjściu z programu i wyświetlane przy otwieraniu
-programu. Właściwości: pisz notatki wybraną czcionką i kolorem tła.
+programu. Właściwości: pisz notatki wybraną czcionką i kolorem
+tła.
 
 %prep
 %setup -q -n %{kaname}-%{version}
@@ -141,13 +142,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/knsrcfiles/knotes_printing_theme.knsrc
 %{_datadir}/qlogging-categories5/knotes.categories
 %{_datadir}/qlogging-categories5/knotes.renamecategories
-%attr(755,root,root) %{_libdir}/qt5/plugins/kontact5/kontact_knotesplugin.so
-%dir %{_libdir}/qt5/plugins/pim/kcms/knotes
-%{_libdir}/qt5/plugins/pim/kcms/knotes/kcm_knote_action.so
-%{_libdir}/qt5/plugins/pim/kcms/knotes/kcm_knote_collection.so
-%{_libdir}/qt5/plugins/pim/kcms/knotes/kcm_knote_display.so
-%{_libdir}/qt5/plugins/pim/kcms/knotes/kcm_knote_editor.so
-%{_libdir}/qt5/plugins/pim/kcms/knotes/kcm_knote_misc.so
-%{_libdir}/qt5/plugins/pim/kcms/knotes/kcm_knote_network.so
-%{_libdir}/qt5/plugins/pim/kcms/knotes/kcm_knote_print.so
-%{_libdir}/qt5/plugins/pim/kcms/summary/kcmknotessummary.so
+%dir %{_libdir}/qt5/plugins/pim5/kcms/knotes
+%{_libdir}/qt5/plugins/pim5/kcms/knotes/kcm_knote_action.so
+%{_libdir}/qt5/plugins/pim5/kcms/knotes/kcm_knote_collection.so
+%{_libdir}/qt5/plugins/pim5/kcms/knotes/kcm_knote_display.so
+%{_libdir}/qt5/plugins/pim5/kcms/knotes/kcm_knote_editor.so
+%{_libdir}/qt5/plugins/pim5/kcms/knotes/kcm_knote_misc.so
+%{_libdir}/qt5/plugins/pim5/kcms/knotes/kcm_knote_network.so
+%{_libdir}/qt5/plugins/pim5/kcms/knotes/kcm_knote_print.so
+%{_libdir}/qt5/plugins/pim5/kcms/summary/kcmknotessummary.so
+%{_libdir}/qt5/plugins/pim5/kontact/kontact_knotesplugin.so
