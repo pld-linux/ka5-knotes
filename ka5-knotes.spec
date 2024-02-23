@@ -1,27 +1,27 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	23.08.4
+%define		kdeappsver	24.01.95
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		knotes
 Summary:	knotes
 Name:		ka5-%{kaname}
-Version:	23.08.4
-Release:	1
+Version:	24.01.95
+Release:	0.1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
-Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	4ff60b6ff54e2d7b50af789128758c55
+Source0:	https://download.kde.org/unstable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	499e5c8d99f46709aa8c1bec275cd1c3
 URL:		http://www.kde.org/
-BuildRequires:	Qt5Core-devel >= %{qtver}
-BuildRequires:	Qt5DBus-devel
-BuildRequires:	Qt5Gui-devel
-BuildRequires:	Qt5Network-devel
-BuildRequires:	Qt5PrintSupport-devel
-BuildRequires:	Qt5Test-devel
-BuildRequires:	Qt5Widgets-devel
-BuildRequires:	Qt5Xml-devel
+BuildRequires:	Qt6Core-devel >= %{qtver}
+BuildRequires:	Qt6DBus-devel
+BuildRequires:	Qt6Gui-devel
+BuildRequires:	Qt6Network-devel
+BuildRequires:	Qt6PrintSupport-devel
+BuildRequires:	Qt6Test-devel
+BuildRequires:	Qt6Widgets-devel
+BuildRequires:	Qt6Xml-devel
 BuildRequires:	cmake >= 3.20
 BuildRequires:	gettext-devel
 BuildRequires:	grantlee-qt5-devel >= 5.1
@@ -34,32 +34,31 @@ BuildRequires:	ka5-kontactinterface-devel >= %{kdeappsver}
 BuildRequires:	ka5-kpimtextedit-devel >= %{kdeappsver}
 BuildRequires:	ka5-libkdepim-devel >= %{kdeappsver}
 BuildRequires:	ka5-pimcommon-devel >= %{kdeappsver}
-BuildRequires:	kf5-extra-cmake-modules >= %{kframever}
-BuildRequires:	kf5-kcmutils-devel >= %{kframever}
-BuildRequires:	kf5-kcompletion-devel >= %{kframever}
-BuildRequires:	kf5-kconfig-devel >= %{kframever}
-BuildRequires:	kf5-kconfigwidgets-devel >= %{kframever}
-BuildRequires:	kf5-kcoreaddons-devel >= %{kframever}
-BuildRequires:	kf5-kcrash-devel >= %{kframever}
-BuildRequires:	kf5-kdbusaddons-devel >= %{kframever}
-BuildRequires:	kf5-kdelibs4support-devel >= %{kframever}
-BuildRequires:	kf5-kdnssd-devel >= %{kframever}
-BuildRequires:	kf5-kdoctools-devel >= %{kframever}
-BuildRequires:	kf5-kglobalaccel-devel >= %{kframever}
-BuildRequires:	kf5-kiconthemes-devel >= %{kframever}
-BuildRequires:	kf5-kitemmodels-devel >= %{kframever}
-BuildRequires:	kf5-kitemviews-devel >= %{kframever}
-BuildRequires:	kf5-knewstuff-devel >= %{kframever}
-BuildRequires:	kf5-knotifications-devel >= %{kframever}
-BuildRequires:	kf5-knotifyconfig-devel >= %{kframever}
-BuildRequires:	kf5-kparts-devel >= %{kframever}
-BuildRequires:	kf5-ktextwidgets-devel >= %{kframever}
-BuildRequires:	kf5-kwidgetsaddons-devel >= %{kframever}
-BuildRequires:	kf5-kwindowsystem-devel >= %{kframever}
-BuildRequires:	kf5-kxmlgui-devel >= %{kframever}
+BuildRequires:	kf6-extra-cmake-modules >= %{kframever}
+BuildRequires:	kf6-kcmutils-devel >= %{kframever}
+BuildRequires:	kf6-kcompletion-devel >= %{kframever}
+BuildRequires:	kf6-kconfig-devel >= %{kframever}
+BuildRequires:	kf6-kconfigwidgets-devel >= %{kframever}
+BuildRequires:	kf6-kcoreaddons-devel >= %{kframever}
+BuildRequires:	kf6-kcrash-devel >= %{kframever}
+BuildRequires:	kf6-kdbusaddons-devel >= %{kframever}
+BuildRequires:	kf6-kdnssd-devel >= %{kframever}
+BuildRequires:	kf6-kdoctools-devel >= %{kframever}
+BuildRequires:	kf6-kglobalaccel-devel >= %{kframever}
+BuildRequires:	kf6-kiconthemes-devel >= %{kframever}
+BuildRequires:	kf6-kitemmodels-devel >= %{kframever}
+BuildRequires:	kf6-kitemviews-devel >= %{kframever}
+BuildRequires:	kf6-knewstuff-devel >= %{kframever}
+BuildRequires:	kf6-knotifications-devel >= %{kframever}
+BuildRequires:	kf6-knotifyconfig-devel >= %{kframever}
+BuildRequires:	kf6-kparts-devel >= %{kframever}
+BuildRequires:	kf6-ktextwidgets-devel >= %{kframever}
+BuildRequires:	kf6-kwidgetsaddons-devel >= %{kframever}
+BuildRequires:	kf6-kwindowsystem-devel >= %{kframever}
+BuildRequires:	kf6-kxmlgui-devel >= %{kframever}
 BuildRequires:	libxslt-progs
 BuildRequires:	ninja
-BuildRequires:	qt5-build >= %{qtver}
+BuildRequires:	qt6-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	shared-mime-info
 BuildRequires:	tar >= 1:1.22
@@ -76,8 +75,7 @@ notes in your choice of font and background color.
 KNotes jest programem pozwalającym pisać na komputerze notatki,
 odpowiedniki samoprzylepnych karteczek. Notatki są zapisywane
 automatycznie przy wyjściu z programu i wyświetlane przy otwieraniu
-programu. Właściwości: pisz notatki wybraną czcionką i kolorem
-tła.
+programu. Właściwości: pisz notatki wybraną czcionką i kolorem tła.
 
 %prep
 %setup -q -n %{kaname}-%{version}
@@ -112,41 +110,36 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/akonadi_notes_agent
 %attr(755,root,root) %{_bindir}/knotes
-%ghost %{_libdir}/libknotesprivate.so.5
-%attr(755,root,root) %{_libdir}/libknotesprivate.so.5.*.*
-%ghost %{_libdir}/libnotesharedprivate.so.5
-%attr(755,root,root) %{_libdir}/libnotesharedprivate.so.5.*.*
+%ghost %{_libdir}/libknotesprivate.so.6
+%attr(755,root,root) %{_libdir}/libknotesprivate.so.*.*
+%ghost %{_libdir}/libnotesharedprivate.so.6
+%attr(755,root,root) %{_libdir}/libnotesharedprivate.so.*.*
+%dir %{_libdir}/qt6/plugins/pim6/kcms/knotes
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/knotes/kcm_knote_action.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/knotes/kcm_knote_collection.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/knotes/kcm_knote_display.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/knotes/kcm_knote_editor.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/knotes/kcm_knote_misc.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/knotes/kcm_knote_network.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/knotes/kcm_knote_print.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/summary/kcmknotessummary.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kontact/kontact_knotesplugin.so
 %{_datadir}/akonadi/agents/notesagent.desktop
 %{_desktopdir}/org.kde.knotes.desktop
 %{_datadir}/config.kcfg/knotesglobalconfig.kcfg
 %{_datadir}/config.kcfg/notesagentsettings.kcfg
 %{_datadir}/dbus-1/interfaces/org.kde.KNotes.xml
 %{_datadir}/dbus-1/interfaces/org.kde.kontact.KNotes.xml
-%{_iconsdir}/hicolor/128x128/apps/knotes.png
-%{_iconsdir}/hicolor/16x16/actions/knotes_alarm.png
-%{_iconsdir}/hicolor/16x16/actions/knotes_close.png
-%{_iconsdir}/hicolor/16x16/actions/knotes_date.png
-%{_iconsdir}/hicolor/16x16/actions/knotes_delete.png
-%{_iconsdir}/hicolor/16x16/apps/knotes.png
-%{_iconsdir}/hicolor/22x22/apps/knotes.png
-%{_iconsdir}/hicolor/32x32/apps/knotes.png
-%{_iconsdir}/hicolor/48x48/apps/knotes.png
-%{_iconsdir}/hicolor/64x64/apps/knotes.png
+%{_iconsdir}/hicolor/*x*/apps/knotes.png
+%{_iconsdir}/hicolor/*x*/actions/*.png
 %{_iconsdir}/hicolor/scalable/apps/knotes.svg
 %{_datadir}/knotes
-%{_datadir}/knotifications5/akonadi_notes_agent.notifyrc
-%{_datadir}/kxmlgui5/knotes
+%{_datadir}/knotifications6/akonadi_notes_agent.notifyrc
 %{_datadir}/metainfo/org.kde.knotes.appdata.xml
 %{_datadir}/knsrcfiles/knotes_printing_theme.knsrc
-%{_datadir}/qlogging-categories5/knotes.categories
-%{_datadir}/qlogging-categories5/knotes.renamecategories
-%dir %{_libdir}/qt5/plugins/pim5/kcms/knotes
-%{_libdir}/qt5/plugins/pim5/kcms/knotes/kcm_knote_action.so
-%{_libdir}/qt5/plugins/pim5/kcms/knotes/kcm_knote_collection.so
-%{_libdir}/qt5/plugins/pim5/kcms/knotes/kcm_knote_display.so
-%{_libdir}/qt5/plugins/pim5/kcms/knotes/kcm_knote_editor.so
-%{_libdir}/qt5/plugins/pim5/kcms/knotes/kcm_knote_misc.so
-%{_libdir}/qt5/plugins/pim5/kcms/knotes/kcm_knote_network.so
-%{_libdir}/qt5/plugins/pim5/kcms/knotes/kcm_knote_print.so
-%{_libdir}/qt5/plugins/pim5/kcms/summary/kcmknotessummary.so
-%{_libdir}/qt5/plugins/pim5/kontact/kontact_knotesplugin.so
+%{_datadir}/qlogging-categories6/knotes.categories
+%{_datadir}/qlogging-categories6/knotes.renamecategories
+%dir %{_datadir}/kxmlgui5/knotes
+%{_datadir}/kxmlgui5/knotes/knotes_part.rc
+%{_datadir}/kxmlgui5/knotes/knotesappui.rc
+%{_datadir}/kxmlgui5/knotes/knotesui.rc
